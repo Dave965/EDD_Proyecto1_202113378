@@ -1,0 +1,66 @@
+[
+{
+"month": "January",
+"day": 21,
+"song": "Cancion1",
+"artist": "Artista1",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "March",
+"day": 21,
+"song": "Cancion2",
+"artist": "Artista1",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "February",
+"day": 20,
+"song": "Cancion3",
+"artist": "Artista3",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "February",
+"day": 22,
+"song": "Cancion4",
+"artist": "Artista1",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "December",
+"day": 12,
+"song": "Cancion9",
+"artist": "Artista5",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "February",
+"day": 21,
+"song": "Detention",
+"artist": "Melanie Martinez",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "February",
+"day": 21,
+"song": "Cancion0",
+"artist": "Artista2",
+"duration": 2.2,
+"gender": ["pop"]
+},
+{
+"month": "January",
+"day": 30,
+"song": "Cancion11",
+"artist": "Artista1",
+"duration": 2.2,
+"gender": ["pop"]
+}
+]

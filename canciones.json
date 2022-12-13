@@ -1,0 +1,49 @@
+[{
+		"artist": "Oscar Armin",
+		"name": "Cancion1",
+		"duration": 2.2,
+		"gender": ["rock", "pop"]
+	},
+	{
+		"artist": "Oscar Armin",
+		"name": "Cancion2",
+		"duration": 2.4,
+		"gender": ["pop"]
+	},
+	{
+		"artist": "Oscar Armin",
+		"name": "Cancion3",
+		"duration": 1.2,
+		"gender": ["rock"]
+	},
+	{
+		"artist": "Melanie Martinez",
+		"name": "Playdate",
+		"duration": 2.2,
+		"gender": ["pop"]
+	},
+	{
+		"artist": "Melanie Martinez",
+		"name": "The principal",
+		"duration": 2.4,
+		"gender": ["pop"]
+	},
+	{
+		"artist": "Dua lipa",
+		"name": "New rules",
+		"duration": 3.6,
+		"gender": ["pop"]
+	},
+	{
+		"artist": "Dua lipa",
+		"name": "Kiss and make up",
+		"duration": 2.4,
+		"gender": ["pop"]
+	},
+	{
+		"artist": "Blackpink",
+		"name": "Pretty savage",
+		"duration": 2.4,
+		"gender": ["kpop"]
+	}
+]
