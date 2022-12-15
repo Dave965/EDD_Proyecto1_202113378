@@ -28,7 +28,9 @@ class Arbol_binario{
 		var nodo = 0;
 
 		if(this.raiz == null){
-			print("arbol vacio");
+			d3.select("#"+lienzo).selectAll('*').remove();
+			console.log("arbol vacio");
+			return 0;
 		}
 		let res = this.generar_grafo(tmp,0,0,nodos);
 		codigo_dot += res.s;
@@ -65,4 +67,38 @@ class Arbol_binario{
 		return { s, actual };		
 	}
 	
+	generar_html(nodo,actual,s){
+		if(actual % 3 == 0){
+				s += `</div>
+				</div>
+				<div class="container-fluid">
+				<div class="d-flex flex-row">`;
+		}
+
+		if(nodo == null){
+			return {s, actual};
+		}
+		s += `<div class="card mx-2 card-block border-5" style="min-width: 18rem; max-width: 18rem; margin-bottom: 2vh;">
+				  <div class="card-header">
+				    Podcast: `+nodo.data.name+`
+				  </div>
+				  <div class="card-body">
+				    <p class="card-text">Tema: `+nodo.data.topic+`</p>
+				    <p class="card-text">Duracion: `+nodo.data.duration+`</p>
+				    <p class="card-text">Invitados: `+nodo.data.guests+`</p>
+				  </div>
+				</div>`;
+
+		actual ++;
+
+		let res = this.generar_html(nodo.izq,actual,"");
+		s += res.s;
+		let max = res.actual;
+
+		let res2 = this.generar_html(nodo.der,max,"");
+		s += res2.s;
+		actual = res2.actual;
+
+		return { s, actual };
+	}
 }

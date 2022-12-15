@@ -18,6 +18,7 @@ class Enlazada{
 			tmp.sig = n_nodo;
 			n_nodo.sig = this.cabeza;
 			n_nodo.ant = tmp;
+			this.cabeza.ant = n_nodo;
 		}
 	}
 
@@ -66,7 +67,7 @@ class Enlazada{
 			nodos += "N_"+ numnodo + "[label = \"Cancion: "+ tmp.data.nombre+ "\"];\n";
 			var aux = numnodo + 1;
 			conexiones += "N_" + numnodo + " -> N_" + aux +"[dir=\"both\"];\n";
-			if(tmp == actual){
+			if(tmp.data.nombre == actual.nombre){
 				conexiones += "N_" + numnodo + " -> N_" + numnodo +"[label = \"Actual\" color = \"white\"];\n";
 			}
 			tmp = tmp.sig;
@@ -74,7 +75,10 @@ class Enlazada{
 		}
 
 		nodos += "N_"+ numnodo + "[label = \"Cancion: "+ tmp.data.nombre+ "\"];\n";
-		conexiones += "N_" + numnodo + " -> N_0;\n";
+		conexiones += "N_" + numnodo + " -> N_0[dir=\"both\"];\n";
+		if(tmp.data.nombre == actual.nombre){
+				conexiones += "N_" + numnodo + " -> N_" + numnodo +"[label = \"Actual\" color = \"white\"];\n";
+		}
 
 		conexiones += "N_0 -> N_0 [label = \"Cabeza\" color = \"white\"];\n";
 		codigo_dot += "//nodos \n";

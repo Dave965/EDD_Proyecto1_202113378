@@ -3,13 +3,13 @@ Lista_artistas = new Lista_simple();
 Musica_programada = new Matriz_dispersa();
 Arbol_podcast = new Arbol_binario();
 
-primer_usuario = new Usuario("3023673810101","david","dave965",sha256("12345"),"55646028",true);
+primer_usuario = new Usuario("2654568452521","Oscar Armin","EDD",sha256("123"),"+502 (123) 123-4567",true);
 Lista_usuarios.poner(primer_usuario);
 
 let current = 'paginaEntrar';
 let current_admin = 'Admin_graphs';
 let current_us = 'us_musica';
-var en_sesion = primer_usuario;
+var en_sesion = null;
 
 // funcion de botones
 
@@ -21,6 +21,7 @@ function acceso(){
 
 	username.value = "";
 	pass.value = "";
+	admin.value = "";
 
 	if(encontrado == 0){
 		alert("usuario no encontrado");
@@ -197,7 +198,7 @@ function cargar_us_artistas(){
 	while(tmp != null){
 		row_id = "container_artista_"+tmp.data.nombre;
 		rows += `<div class="container-fluid">
-				<div class="d-flex flex-row flex-nowrap overflow-auto" id = "`+row_id+`">
+				<div class="d-flex flex-row flex-nowrap" id = "`+row_id+`">
 				</div>
 				</div>
 				<hr/>`
@@ -213,13 +214,14 @@ function cargar_us_artistas(){
 		row_id = "container_artista_"+tmp.data.nombre;
 		cards += `<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh;">
 					  <div class="card-header">
-					    `+tmp.data.nombre+`
+					    Artista: `+tmp.data.nombre+`
 					  </div>
 					  <div class="card-body">
 					    <p class="card-text">Edad: `+tmp.data.edad+`</p>
 					    <p class="card-text">Pais: `+tmp.data.pais+`</p>
 					  </div>
-					</div>`;
+					</div>
+					<div class="d-flex flex-row flex-nowrap overflow-auto">`;
 		tmp2 = tmp.data.canciones.cabeza;
 		while(tmp2 != null){
 			cards += `<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh;">
@@ -234,6 +236,7 @@ function cargar_us_artistas(){
 			tmp2 = tmp2.sig
 		}
 
+		cards += "</div>";
 		crear_objeto(row_id,cards);
 		tmp = tmp.sig;
 	}
@@ -325,6 +328,7 @@ function cargar_us_musica(){
 
 	cards += `<div class="container-fluid">
 				<div class="d-flex flex-row">`;
+	
 	while(tmp != null){
 		tmp2 = tmp.data.canciones.cabeza;
 		while(tmp2!=null){
@@ -361,41 +365,64 @@ function cargar_us_musica(){
 }
 
 function cargar_us_playlist(actual){
-	cards = "";
-	cards+= `<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh; transform: scale(0.5);">
-				  <div class="card-header">
-				    `+actual.ant.data.nombre+`
-				  </div>
-				  <div class="card-body">
-				    <p class="card-text">Artista: `+actual.ant.data.artista+`</p>
-				    <p class="card-text">Duracion: `+actual.ant.data.duracion+`</p>
-				    <p class="card-text">Genero: `+actual.ant.data.genero+`</p>
-				  </div>
-				</div>
-				<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh;">
-				  <div class="card-header">
-				    `+actual.data.nombre+`
-				  </div>
-				  <div class="card-body">
-				    <p class="card-text">Artista: `+actual.data.artista+`</p>
-				    <p class="card-text">Duracion: `+actual.data.duracion+`</p>
-				    <p class="card-text">Genero: `+actual.data.genero+`</p>
-				  </div>
-				</div>
-				<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh; transform: scale(0.5);">
-				  <div class="card-header">
-				    `+actual.sig.data.nombre+`
-				  </div>
-				  <div class="card-body">
-				    <p class="card-text">Artista: `+actual.sig.data.artista+`</p>
-				    <p class="card-text">Duracion: `+actual.sig.data.duracion+`</p>
-				    <p class="card-text">Genero: `+actual.sig.data.genero+`</p>
-				  </div>
+	let cards = "";
+	let botones = ""; 
+	if(actual != null){
+		botones = `<button type="button" class="btn btn-info" style="margin: 10px; width: 50%;" onclick="cancion_ant('`+actual.data.nombre+`', '`+actual.data.artista+`')">   <   </button>
+	                  <button type="button" class="btn btn-info" style="margin: 10px; width: 50%;" onclick="cancion_sig('`+actual.data.nombre+`','`+actual.data.artista+`')">   >   </button>`;
+		cards+= `<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh; transform: scale(0.5);">
+					  <div class="card-header">
+					    `+actual.ant.data.nombre+`
+					  </div>
+					  <div class="card-body">
+					    <p class="card-text">Artista: `+actual.ant.data.artista+`</p>
+					    <p class="card-text">Duracion: `+actual.ant.data.duracion+`</p>
+					    <p class="card-text">Genero: `+actual.ant.data.genero+`</p>
+					  </div>
+					</div>
+					<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh;  margin-left: 50px;margin-right: 50px;">
+					  <div class="card-header">
+					    `+actual.data.nombre+`
+					  </div>
+					  <div class="card-body">
+					    <p class="card-text">Artista: `+actual.data.artista+`</p>
+					    <p class="card-text">Duracion: `+actual.data.duracion+`</p>
+					    <p class="card-text">Genero: `+actual.data.genero+`</p>
+					  </div>
+					</div>
+					<div class="card mx-2 card-block border-5" style="min-width: 20rem; max-width: 20rem; margin-bottom: 2vh; transform: scale(0.5);">
+					  <div class="card-header">
+					    `+actual.sig.data.nombre+`
+					  </div>
+					  <div class="card-body">
+					    <p class="card-text">Artista: `+actual.sig.data.artista+`</p>
+					    <p class="card-text">Duracion: `+actual.sig.data.duracion+`</p>
+					    <p class="card-text">Genero: `+actual.sig.data.genero+`</p>
+					  </div>
+					</div>`;
+
+		en_sesion.playlist.graficar_enlazada("us_playlist_lienzo", 1475,400,actual.data);
+	}
+	else{
+		cards+=	`<div class="d-flex flex-column" style="align-items: center;">
+          <h3>No se han agregado canciones a la Playlist</h3>
+        </div>`;
+        en_sesion.playlist.graficar_enlazada("us_playlist_lienzo", 1475,400,null);
+	}
+	crear_objeto("us_playlist_container",cards);
+	crear_objeto("us_playlist_buttons",botones);
+}
+
+function cargar_us_podcast(){
+	let cards = "";
+	cards += `<div class="container-fluid">
+				<div class="d-flex flex-row">`;
+	let res = Arbol_podcast.generar_html(Arbol_podcast.raiz,0,"");
+	cards += res.s;
+	cards += `</div>
 				</div>`;
-
-	crear_objeto("us_musica_container",cards);
-
-	en_sesion.playlist.graficar_enlazada("us_playlist_lienzo", 1500,400,actual);
+	crear_objeto("us_podcast_container",cards);
+	Arbol_podcast.graficar_binario("us_podcast_lienzo", 1475,600)	
 }
 
 function crear_objeto(div_id,inner){
@@ -449,15 +476,87 @@ function agregar_playlist(cancion,artista){
 }
 
 function cancion_ant(cancion, artista){
-	let tmp = en_sesion.playlist.buscar(cancion);
+	let tmp = en_sesion.playlist.buscar(cancion, artista);
 	tmp = tmp.ant;
 	cargar_us_playlist(tmp);
 }
 
 function cancion_sig(cancion, artista){
-	let tmp = en_sesion.playlist.buscar(cancion);
+	let tmp = en_sesion.playlist.buscar(cancion, artista);
 	tmp = tmp.sig;
 	cargar_us_playlist(tmp);
+}
+
+function us_publicar_cancion(){
+	var nombre = document.getElementById("us_publicar_nombre");
+	var generos = document.getElementById("us_publicar_generos");
+	var fecha = document.getElementById("us_publicar_fecha");
+
+	n_cancion = new Cancion(en_sesion.username, nombre.value, "",generos.value.split(","));
+	art = Lista_artistas.buscar_artista(en_sesion.username);
+	
+	if(art == 0){
+		art_us = new Artista(en_sesion.username,"","");
+		art_us.canciones.poner(n_cancion);
+		Lista_artistas.poner(art_us);
+	}
+	else{
+		art.canciones.poner(n_cancion);
+	}
+
+	nombre.value = "";
+	generos.value = "";
+	fecha.value = "";
+	alert("se ha publicado la cancion con exito");
+	ir_us_musica();
+}
+
+function us_programar_cancion(){
+	let meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	var nombre = document.getElementById("us_publicar_nombre");
+	var generos = document.getElementById("us_publicar_generos");
+	var fecha = document.getElementById("us_publicar_fecha");
+
+	let fecha_s = fecha.value.split("-");
+	let mes = meses[(parseInt(fecha_s[1])-1)];
+	let dia = parseInt(fecha_s[2]);
+	
+	let n_cancion = new Cancion(en_sesion.username, nombre.value, "",generos.value.split(","));
+	art = Lista_artistas.buscar_artista(en_sesion.username);
+	
+	if(art == 0){
+		art_us = new Artista(en_sesion.username,"","");
+		Lista_artistas.poner(art_us);
+	}
+
+	conseguido = Musica_programada.poner(mes,dia,n_cancion);
+	if(conseguido != 0){
+		art = Lista_artistas.buscar_artista(conseguido.artista);
+
+		if(art != 0){
+			art.canciones.poner(conseguido);
+		}
+	}
+
+	nombre.value = "";
+	generos.value = "";
+	fecha.value = "";
+	alert("se ha programado la cancion con exito");
+	ir_us_musica();
+}
+
+function us_publicar_podcast(){
+	var nombre = document.getElementById("us_podcast_nombre");
+	var tema = document.getElementById("us_podcast_tema");
+	var invitados = document.getElementById("us_podcast_invitados");
+	var duracion = document.getElementById("us_podcast_duracion");
+	n_podcast = new podcast(nombre.value,tema.value,invitados.value.split(","),duracion.value);
+	Arbol_podcast.poner(n_podcast);
+	cargar_us_podcast();
+	nombre.value = "";
+	tema.value = "";
+	invitados.value = "";
+	duracion.value = "";
 }
 
 // flujo de aplicacion
@@ -529,6 +628,15 @@ function ir_us_amigos(){
 function ir_us_bloqueados(){
 	cambiar_sub_us('us_bloqueados');
 	cargar_us_bloqueados();
+}
+
+function ir_us_publicar(){
+	cambiar_sub_us('us_publish_song');
+}
+
+function ir_us_podcasts(){
+	cambiar_sub_us('us_podcast');
+	cargar_us_podcast();
 }
 
 // cambio de paginas
