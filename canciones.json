@@ -1,49 +1,49 @@
-[{
-		"artist": "Oscar Armin",
-		"name": "Cancion1",
-		"duration": 2.2,
-		"gender": ["rock", "pop"]
-	},
-	{
-		"artist": "Oscar Armin",
-		"name": "Cancion2",
-		"duration": 2.4,
-		"gender": ["pop"]
-	},
-	{
-		"artist": "Oscar Armin",
-		"name": "Cancion3",
-		"duration": 1.2,
-		"gender": ["rock"]
-	},
-	{
-		"artist": "Melanie Martinez",
-		"name": "Playdate",
-		"duration": 2.2,
-		"gender": ["pop"]
-	},
-	{
-		"artist": "Melanie Martinez",
-		"name": "The principal",
-		"duration": 2.4,
-		"gender": ["pop"]
-	},
-	{
-		"artist": "Dua lipa",
-		"name": "New rules",
-		"duration": 3.6,
-		"gender": ["pop"]
-	},
-	{
-		"artist": "Dua lipa",
-		"name": "Kiss and make up",
-		"duration": 2.4,
-		"gender": ["pop"]
-	},
-	{
-		"artist": "Blackpink",
-		"name": "Pretty savage",
-		"duration": 2.4,
-		"gender": ["kpop"]
-	}
-]
+[{"artist":"Lamont Bussen","name":"pulvinar","duration":3.15,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Lamont Bussen","name":"non velit","duration":3.48,"gender":["Dubstyle"]},
+{"artist":"Thea Lawly","name":"luctus et ultrices","duration":2.29,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Lamont Bussen","name":"diam cras","duration":4.52,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Noemi Rollingson","name":"hendrerit at vulputate","duration":4.72,"gender":["Dubstyle"]},
+{"artist":"Thea Lawly","name":"in tempus","duration":2.28,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Thea Lawly","name":"a suscipit nulla","duration":1.16,"gender":["Dubstyle"]},
+{"artist":"Noemi Rollingson","name":"ipsum dolor sit","duration":2.08,"gender":["Dubstyle"]},
+{"artist":"Allyn Harrowing","name":"pede ac diam","duration":2.57,"gender":["Dubstyle"]},
+{"artist":"Allyn Harrowing","name":"sit","duration":2.43,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Hadley Chastenet","name":"dui vel sem","duration":3.52,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Hadley Chastenet","name":"dolor","duration":3.45,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Hadley Chastenet","name":"dolor","duration":1.86,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Zonnya Elletson","name":"cum sociis","duration":3.49,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Zonnya Elletson","name":"justo","duration":3.21,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Zonnya Elletson","name":"amet lobortis","duration":1.24,"gender":["Dubstyle"]},
+{"artist":"Zonnya Elletson","name":"leo odio condimentum","duration":1.76,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Renae Juzek","name":"habitasse platea","duration":1.05,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Zonnya Elletson","name":"vel","duration":2.07,"gender":["Dubstyle"]},
+{"artist":"Hadley Chastenet","name":"tincidunt","duration":4.08,"gender":["Dubstyle"]},
+{"artist":"Jonathon Sawers","name":"amet justo morbi","duration":1.48,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Ruddie Mandre","name":"montes nascetur","duration":1.94,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Jonathon Sawers","name":"vivamus vel","duration":1.7,"gender":["Dubstyle"]},
+{"artist":"Ruddie Mandre","name":"luctus","duration":3.87,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Jonathon Sawers","name":"justo sit amet","duration":4.48,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Faith Lomax","name":"in tempus","duration":2.28,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Jonathon Sawersn","name":"sit amet consectetuer","duration":3.43,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Regen Dyka","name":"nunc","duration":2.74,"gender":["Dubstyle"]},
+{"artist":"Regen Dyka","name":"cursus","duration":2.14,"gender":["Dubstyle"]},
+{"artist":"Regen Dyka","name":"nisl duis bibendum","duration":4.67,"gender":["Dubstyle"]},
+{"artist":"Regen Dyka","name":"cubilia curae nulla","duration":3.08,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Ruddie Mandre","name":"nulla","duration":3.23,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Regen Dyka","name":"purus phasellus","duration":2.46,"gender":["Dubstyle"]},
+{"artist":"Regen Dyka","name":"lorem","duration":2.92,"gender":["Dubstyle"]},
+{"artist":"Jonathon Sawers","name":"nisi vulputate nonummy","duration":4.95,"gender":["Dubstyle"]},
+{"artist":"Ruddie Mandre","name":"ac lobortis","duration":2.13,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Renae Juzek","name":"tincidunt","duration":4.84,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Renae Juzek","name":"adipiscing","duration":1.92,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Renae Juzek","name":"scelerisque","duration":4.98,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Renae Juzek","name":"sagittis sapien cum","duration":1.75,"gender":["Dubstyle"]},
+{"artist":"Faith Lomax","name":"mattis","duration":3.47,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Faith Lomax","name":"libero","duration":1.7,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Jonathon Sawers","name":"ornare consequat","duration":3.9,"gender":["Heavy metal","Ska jazz"]},
+{"artist":"Jonathon Sawers","name":"leo rhoncus sed","duration":4.04,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Jonathon Sawers","name":"ridiculus mus","duration":4.23,"gender":["Dubstyle"]},
+{"artist":"Jonathon Sawers","name":"at","duration":1.66,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Jonathon Sawers","name":"at","duration":4.09,"gender":["Dubstyle"]},
+{"artist":"Allyn Harrowing","name":"sit amet","duration":2.74,"gender":["Electronica","Noise pop","Acid jazz"]},
+{"artist":"Hadley Chastenet","name":"nisl duis ac","duration":4.6,"gender":["Heavy metal","Ska jazz"]}]

@@ -8,6 +8,7 @@ class Usuario {
 		this.admin = admin;
 		this.amigos = new Pila();
 		this.bloqueados = new Cola();
+		this.playlist = new Enlazada();
 	}
 }
 

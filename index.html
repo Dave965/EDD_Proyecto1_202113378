@@ -153,7 +153,7 @@
                 <a class="nav-link" onclick="ir_admin_can()">Canciones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" >Podcast</a>
+                <a class="nav-link" onclick="ir_admin_pod()">Podcast</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" onclick="ir_admin_prog()">Musica programada</a>
@@ -176,7 +176,7 @@
                   <button type="button" class="btn btn-success" style="margin: 10px;" onclick="g_usuarios()">Usuarios</button>
                   <button type="button" class="btn btn-danger" style="margin: 10px;" onclick="g_artistas()">Artistas</button>
                   <button type="button" class="btn btn-warning" style="margin: 10px;"  onclick="g_m_programada()">Musica programada</button>
-                  <button type="button" class="btn btn-info"  style="margin: 10px;">Podcasts</button>
+                  <button type="button" class="btn btn-info"  style="margin: 10px;" onclick="g_podcast()">Podcasts</button>
                 </div>
               </div>
               <div class="d-flex flex-column"  id ="admin_lienzo" style="width: 75%;">
@@ -190,6 +190,16 @@
                 <h2 style="margin-top: 20px;">Carga de Usuarios</h2>
                 <textarea class="form-control border-dark" id="txt_mass_us" style="margin-top: 1%;max-width: 60%; min-height: 60%; margin-bottom: 1%;" ></textarea>
                 <button type="button" class="btn btn-success" style="margin-top: 10px; max-width: 150px;" onclick="carga_masivo_us()">cargar</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="Admin_podcast" style="height: 90%;" hidden>
+            <div class="d-flex flex-row" style="height: 100%; width: 100%; justify-content: center;">
+              <div class="d-flex flex-column" style="align-items: center; width: 100%;">
+                <h2 style="margin-top: 20px;">Carga de Podcast</h2>
+                <textarea class="form-control border-dark" id="txt_mass_pod" style="margin-top: 1%;max-width: 60%; min-height: 60%; margin-bottom: 1%;" ></textarea>
+                <button type="button" class="btn btn-success" style="margin-top: 10px; max-width: 150px;" onclick="carga_masivo_podcast()">cargar</button>
               </div>
             </div>
           </section>
@@ -258,11 +268,25 @@
       </nav>
 
       <section id="us_musica" style="height: 90%;">
-        <h1>Musica</h1>
+        <div class="d-flex flex-column" style="align-items: center;">
+          <h1>Musica</h1>
+        </div>
+        <div class="d-flex flex-column flex-nowrap overflow-auto" id = "us_musica_container" style="height: 50%;">
+        </div>
       </section>
 
       <section id="us_playlist" style="height: 90%;" hidden>
-        <h1>Playlist</h1>
+        <div class="d-flex flex-column" style="align-items: center;">
+          <h1>Playlist</h1>
+        </div>
+        <div class="d-flex flex-column flex-nowrap" id = "us_playlist_container" style="height: 50%;">
+        </div>
+        <div class="d-flex flex-row" style="width: 100%;">
+                  <button type="button" class="btn btn-info" style="margin: 10px; width: 50%;" onclick="cancion_ant()">   <   </button>
+                  <button type="button" class="btn btn-info" style="margin: 10px; width: 50%;" onclick="cancion_sig()">   >   </button>
+        </div>
+        <div class="d-flex flex-column"  id ="us_playlist_lienzo" style="width: 75%; height: 100%;">
+        </div>
       </section>
 
       <section id="us_artistas" style="height: 90%;" hidden>
@@ -342,6 +366,9 @@
     <script src="Cola.js"></script>
     <script src="Matriz_dispersa.js"></script>
     <script src="Lista_Simple.js"></script>
+    <script src="Arbol_binario.js"></script>
+    <script src="enlazada.js"></script>
+    <script src="podcast.js"></script>
     <script src="usuario.js"></script>
     <script src="cancion.js"></script>
     <script src="artista.js"></script>

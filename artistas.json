@@ -1,27 +1,18 @@
-[
-{
-"name": "Oscar Armin",
-"age": 21,
-"country": "Guatemala"
-},
-{
-"name": "Eminem",
-"age": 50,
-"country": "USA"
-},
-{
-"name": "Melanie Martinez",
-"age": 25,
-"country": "USA"
-},
-{
-"name": "Blackpink",
-"age": 26,
-"country": "Corea"
-},
-{
-"name": "Dua lipa",
-"age": 27,
-"country": "USA"
-}
-]
+[{"name":"Danya Prier","age":35,"country":"Egypt"},
+{"name":"Zilvia Tunstall","age":56,"country":"Venezuela"},
+{"name":"Lamont Bussen","age":66,"country":"China"},
+{"name":"Ingelbert Crighten","age":24,"country":"Palestinian Territory"},
+{"name":"Daffi Bustard","age":51,"country":"China"},
+{"name":"Kaitlyn Farron","age":43,"country":"Japan"},
+{"name":"Matelda Casazza","age":30,"country":"Dominican Republic"},
+{"name":"Zach Gwyn","age":58,"country":"Ireland"},
+{"name":"Godard Brabyn","age":29,"country":"China"},
+{"name":"Rozanne Ewebank","age":61,"country":"China"},
+{"name":"Fred Esbrook","age":52,"country":"Thailand"},
+{"name":"Thea Lawly","age":25,"country":"Russia"},
+{"name":"Renae Juzek","age":22,"country":"Brazil"},
+{"name":"Faith Lomax","age":60,"country":"Argentina"},
+{"name":"Jonathon Sawers","age":43,"country":"Tanzania"},
+{"name":"Keefe Gimblet","age":37,"country":"China"},
+{"name":"Allyn Harrowing","age":20,"country":"El Salvador"},
+{"name":"Hadley Chastenet","age":45,"country":"Indonesia"}]

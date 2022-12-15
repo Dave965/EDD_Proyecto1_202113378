@@ -92,8 +92,11 @@ class Lista_simple{
 		return 0;
 	}
 
-//Graficas
+	buscar_cancion(artista,cancion){
+		return this.buscar_artista(artista).canciones.buscar_artista(cancion);
+	}
 
+//Graficas
 	graficar_usuarios(){
 		var codigo_dot = "digraph G{\nlabel=\" Lista de Usuarios \"; \nnode [shape=box];\ngraph [rankdir = LR];\n";
 		var tmp = this.cabeza;
