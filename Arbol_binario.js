@@ -35,7 +35,7 @@ class Arbol_binario{
 		let res = this.generar_grafo(tmp,0,0,nodos);
 		codigo_dot += res.s;
 		codigo_dot += "}";
-		console.log(codigo_dot);
+
 		d3.select("#"+lienzo).graphviz()
 			.width(w)
 			.height(h)

@@ -195,7 +195,7 @@ class Matriz_dispersa{
 		
 		codigo_dot += "//conexiones \n";
 		codigo_dot += "{\n"+conexiones+"\n}\n}";
-		console.log(codigo_dot);
+
 		d3.select("#admin_lienzo").graphviz()
 			.width(1100)
 			.height(650)
